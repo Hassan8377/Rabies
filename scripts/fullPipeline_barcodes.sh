@@ -11,13 +11,14 @@ echo -e "sample\treads\tmapped\tbasesCovered\tbasesCoveredx20\tbasesCoveredx100"
 
 for f in $files
 do
-#time(
-bc=${f//[!0-9]/}
+time(
+bc=${f//[!0-9]/} ##I think this doesn't work for bc>9
 mkdir -p ~/pipeline_output/minion_output/$runname/BC$bc
 
-#rabies_prelimMap.sh $ref $runname $bc
+rabies_prelimMap.sh $ref $runname $bc
 
-artic minion --normalise 200 --threads 4 --scheme-directory '/home2/kb157b/pipeline_output/primer-schemes' --read-file $runname"_all-BC"$bc.fastq --nanopolish-read-file $runname"_all.fastq" $runname"_prelim"/bc$bc $bc"prelimMapped" )
+artic minion --normalise 200 --threads 4 --scheme-directory '/home2/kb157b/pipeline_output/primer-schemes' --read-file $runname"_all-BC"$bc.fastq --nanopolish-read-file $runname"_all.fastq" $runname"_prelim"/bc$bc $bc"prelimMapped"
+)
 
 #summary mapping stats
 reads=$(samtools view $bc"prelimMapped.sorted.bam" | cut -f 1 | sort | uniq | wc -l) 
