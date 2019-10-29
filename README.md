@@ -1,4 +1,4 @@
-# genome-rabv
+# rabies_minion
 Repository of material for rabies virus genomic surveillance.
 
 #Primer schemes  
