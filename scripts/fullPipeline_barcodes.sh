@@ -5,7 +5,7 @@ set -e
 
 runname=$1
 ref=$2
-files=$runname"_all-BC"*".fastq"
+files=${runname}_all-BC*.fastq
 
 echo -e "sample\treads\tmapped\tbasesCovered\tbasesCoveredx20\tbasesCoveredx100" > $runname"_bc_mappingstats".txt
 
