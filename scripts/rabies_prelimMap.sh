@@ -29,5 +29,5 @@ bwa index $output/$runname"_prelim".reference.fasta
 #bed:
 newname=$(grep -e ">" $output/$runname"_prelim".reference.fasta | awk 'sub(/^>/, "")')
 cp ~/artic-rabv/primer-schemes/$ref/V1/$ref.scheme.bed $output/$runname"_prelim".scheme.bed
-sed -i "s/KX148266/${newname}/g" $output/$runname"_prelim".scheme.bed
+sed -i "s/\(KX148266|KF155002.1\)/${newname}/g" $output/$runname"_prelim".scheme.bed
 
