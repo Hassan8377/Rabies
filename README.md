@@ -1,5 +1,6 @@
 # rabies_minion
-Repository of material for rabies virus genomic surveillance.
+Repository of material for rabies virus genomic surveillance using MinION sequencing.  
+Includes resources and datasets used for sequences in publication "Rapid in-country sequencing of whole virus genomes to inform rabies elimination programmes" (Brunker et al, In Prep).  
 
 #Primer schemes  
 Multiplex primer schemes for rabies virus whole genome sequencing, designed using Primal Scheme (http://primal.zibraproject.org/)  
